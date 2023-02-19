@@ -26,6 +26,11 @@ pipeline{
                 }
             }
         }
+        stage ('Slack send message'){
+            steps{
+                slackSend message: 'Link to heroku site is https://intense-scrubland-40782.herokuapp.com/'
+            }
+        }
     }
     post{
         always{
