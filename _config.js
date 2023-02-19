@@ -1,6 +1,10 @@
 var config = {}
 
+<<<<<<< HEAD
 // Update to have your correct username and password
+=======
+// Updated to have your correct username and password
+>>>>>>> test
 config.mongoURI = {
     production: 'mongodb+srv://haroldnh94:ZpbvEpmfxLxnWdbb@cluster1.bzkjuid.mongodb.net/?retryWrites=true&w=majority',
     development: 'mongodb+srv://haroldnh94:ZpbvEpmfxLxnWdbb@cluster1.bzkjuid.mongodb.net/?retryWrites=true&w=majority',
