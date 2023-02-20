@@ -28,7 +28,7 @@ pipeline{
         }
         stage ('Slack send message'){
             steps{
-                slackSend message: 'Link to heroku site is https://agile-caverns-37802.herokuapp.com/'
+                slackSend message: 'Link to heroku site is; https://agile-caverns-37802.herokuapp.com/'
             }
         }
     }
