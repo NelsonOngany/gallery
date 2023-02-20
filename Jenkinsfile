@@ -22,13 +22,13 @@ pipeline{
          stage('Deploy to Heroku'){
             steps{
                 withCredentials([usernameColonPassword(credentialsId:'heroku', variable:'HEROKU_CREDENTIALS')]){
-                    sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/gallery-code.git master'
+                    sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/agile-caverns-37802.git master'
                 }
             }
         }
         stage ('Slack send message'){
             steps{
-                slackSend message: 'Link to heroku site is https://git.heroku.com/gallery-code.git/'
+                slackSend message: 'Link to heroku site is https://agile-caverns-37802.herokuapp.com/'
             }
         }
     }
