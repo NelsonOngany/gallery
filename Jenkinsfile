@@ -22,13 +22,13 @@ pipeline{
          stage('Deploy to Heroku'){
             steps{
                 withCredentials([usernameColonPassword(credentialsId:'heroku', variable:'HEROKU_CREDENTIALS')]){
-                    sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/intense-scrubland-40782.git master'
+                    sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/gallery-code.git master'
                 }
             }
         }
         stage ('Slack send message'){
             steps{
-                slackSend message: 'Link to heroku site is https://intense-scrubland-40782.herokuapp.com/'
+                slackSend message: 'Link to heroku site is https://git.heroku.com/gallery-code.git/'
             }
         }
     }
